@@ -1,0 +1,54 @@
+<div class="chaos-panel grid_8">
+  <div class="chaos-panel-header">
+    <span>编辑房地产项目信息</span>
+  </div>
+  <div class="chaos-panel-body no-padding">
+    <%= form_for [:admin, @real_estate_project], html: { class: 'chaos-form' } do |f| %>
+      <%= render "shared/admin/error_messages", target: @real_estate_project %>
+      <div class="chaos-form-inline">
+        <div class="chaos-form-row bordered">
+          <label class="chaos-form-label">名称</label>
+          <div class="chaos-form-item">
+            <%= f.text_field :name %>
+          </div>
+        </div>
+        <div class="chaos-form-row bordered">
+          <label class="chaos-form-label">封面图片（218x158）</label>
+          <div class="chaos-form-item">
+            <%= f.file_field :cover_image %>
+          </div>
+        </div>
+        <div class="chaos-form-row bordered">
+          <label class="chaos-form-label">预览图片（221x146）</label>
+          <div class="chaos-form-item">
+            <%= f.file_field :preview_image %>
+          </div>
+        </div>
+        <div class="chaos-form-row bordered">
+          <label class="chaos-form-label">全景图片（681x305）</label>
+          <div class="chaos-form-item">
+            <%= f.file_field :panaorama_image %>
+          </div>
+        </div>
+        <div class="chaos-form-row bordered">
+          <label class="chaos-form-label">简介</label>
+          <div class="chaos-form-item">
+            <%= f.kindeditor :description %>
+          </div>
+        </div>
+        <div class="chaos-form-row bordered">
+          <label class="chaos-form-label">位置</label>
+          <div class="chaos-form-item">
+            <%= f.text_field :position %>
+          </div>
+        </div>
+      </div>
+      <div class="chaos-button-row">
+        <%= f.submit '提交', class: 'btn btn-danger' %>
+        <input type="reset" value="重置" class="btn" />
+        <%= chaos_button_to_return '返回房地产项目信息', path: url_for([:admin, @real_estate_project]) %>
+        <%= chaos_button_to_return '返回房地产项目列表', path: admin_real_estate_projects_path %>
+      </div>
+    <% end %>
+  </div>
+</div>

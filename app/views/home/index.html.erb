@@ -1,0 +1,36 @@
+<div id="content-wrapper">
+  <div id="cover">
+    <div class="top"></div>
+    <div class="poster-left"></div>
+    <div id="poster" class="poster">
+      <div class="prev">
+        <%= link_to image_tag('cover_arrow_left.png'), nil, id: 'banner-prev', class: 'control' %>
+      </div>
+      <div id="banner-marquee" class="wrap">
+        <ul>
+          <li><%= link_to image_tag('cover_banner_01.png') %></li>
+          <li><%= link_to image_tag('cover_banner_02.png') %></li>
+          <li><%= link_to image_tag('cover_banner_03.png') %></li>
+          <li><%= link_to image_tag('cover_banner_04.png') %></li>
+        </ul>
+      </div>
+      <div class="next">
+        <%= link_to image_tag('cover_arrow_right.png'), nil, id: 'banner-next', class: 'control' %>
+      </div>
+      <%= javascript_tag do %>
+      $(function() {
+        $('#banner-marquee').marquee({
+          auto: false,
+          speed: 1000,
+          showNum: 4,
+          stepLen: 1,
+          prevElement: $('#banner-prev'),
+          nextElement: $('#banner-next')
+        });
+      })
+      <% end %>
+    </div>
+    <div class="clear"></div>
+    <div class="bottom"></div>
+  </div>
+</div>

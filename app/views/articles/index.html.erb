@@ -1,0 +1,26 @@
+<div id="navi-wrapper">
+  <div id="navi"><h1>NEWS</h1></div>
+</div>
+<div id="content-wrapper">
+  <div id="content">
+    <div class="location">
+      <ul>
+        <li class="zh">首页 &gt; 公司动态</li>
+        <li class="en">Home &gt; News</li>
+      </ul>
+    </div>
+    <div class="wrapper">
+      <div class="news-list">
+        <div class="header">ZGB - BEIJING</div>
+        <ul>
+          <% @articles.each do |article| %>
+          <li>
+            <h3><%= link_to "◆ #{article.title}", article %><span><%= date_tag article.displayed_at %></span></h3>
+            <div class="description"><%= indent_tag article.content.strip_tags.strip.truncate(150) %></div>
+          </li>
+          <% end %>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

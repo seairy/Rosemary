@@ -1,0 +1,35 @@
+<div class="chaos-panel grid_8">
+  <div class="chaos-panel-header">
+    <span>房地产项目信息</span>
+  </div>
+  <div class="chaos-panel-body no-padding">
+    <%= form_tag 'nil', class: 'chaos-form' do %>
+      <%= flash_tag %>
+      <div class="chaos-form-inline">
+        <div class="chaos-form-row bordered">
+          <label class="chaos-form-label">名称</label>
+          <div class="chaos-form-item">
+            <span><%= @real_estate_project.name %></span>
+          </div>
+        </div>
+        <div class="chaos-form-row bordered">
+          <label class="chaos-form-label">内容</label>
+          <div class="chaos-form-item">
+            <%= raw @real_estate_project.description %>
+          </div>
+        </div>
+        <div class="chaos-form-row bordered">
+          <label class="chaos-form-label">位置</label>
+          <div class="chaos-form-item">
+            <span><%= @real_estate_project.position %></span>
+          </div>
+        </div>
+      </div>
+      <div class="chaos-button-row">
+        <%= chaos_button_to_edit edit_admin_real_estate_project_path(@real_estate_project) %>
+        <%= chaos_button_to_destroy url_for([:admin, @real_estate_project]) %>
+        <%= chaos_button_to_list admin_real_estate_projects_path %>
+      </div>
+    <% end %>
+  </div>
+</div>

@@ -6,10 +6,16 @@ capybara-*.html
 .rvmrc
 /.bundle
 /vendor/bundle
+/config/database.yml
+/config/initializers/quiet_assets.rb
+/config/deploy.rb
 /log/*
 /tmp/*
+/db/schema.rb
 /db/*.sqlite3
 /public/system/*
+/public/assets/*
+/public/uploads/*
 /coverage/
 /spec/tmp/*
 **.orig
@@ -17,3 +23,4 @@ rerun.txt
 pickle-email-*.html
 .project
 config/initializers/secret_token.rb
+.DS_Store

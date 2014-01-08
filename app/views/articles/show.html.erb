@@ -1,0 +1,37 @@
+<div id="navi-wrapper">
+  <div id="navi"><h1>NEWS</h1></div>
+</div>
+<div id="content-wrapper">
+  <div id="content">
+    <div class="location">
+      <ul>
+        <li class="zh">首页 &gt; 公司动态</li>
+        <li class="en">Home &gt; News</li>
+      </ul>
+    </div>
+    <div class="wrapper">
+      <div class="news-show">
+        <div class="left">
+          <h1><%= @article.title %></h1>
+          <div class"content"><%= raw @article.content %></div>
+        </div>
+        <div class="right">
+          <%= link_to image_tag('ico_weibo.png') %>
+          <ul>
+            <li class="zh">把这个项目分享给朋友们！</li>
+            <li>Share this project to friends!</li>
+          </ul>
+          <p>Ditan "National Yufu" project is the crown Squibb Company and Beijing first agricultural cooperative development and construction group. Projects targeting high-end, low-carbon environmental protection office, high-end clubs and facilities for the elderly. Project is located in the central axis of the Forbidden City and the North East "peace in the district," the core area, adjacent to Ditan Park.</p>
+          <br />
+          <p>The total area of 49 mu, building area of more than 20,000 square meters of land, the development cycle of about two years. After completion of the project, will provide high-quality high-end enterprise office environment and business exchange platform, creating Dongcheng District, "Peace in the new business district landmark," create "Beijing's chief urban ecology Chinese business center."</p>
+        </div>
+        <%= javascript_tag do %>
+        if ($('div.news-show div.left').height() < $('div.news-show div.right').height()) {
+          $('div.news-show div.left').css('height', $('div.news-show div.right').height());
+        }
+        <% end %>
+        <div class="clear"></div>
+      </div>
+    </div>
+  </div>
+</div>
