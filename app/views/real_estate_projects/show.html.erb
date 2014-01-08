@@ -1,0 +1,40 @@
+<div id="navi-wrapper">
+  <div id="navi"><h1>ABOUT US</h1></div>
+</div>
+<div id="content-wrapper">
+  <div id="content">
+    <div class="location">
+      <ul>
+        <li class="zh">首页 &gt; 业务领域 &gt; 房地产开发</li>
+        <li class="en">Home &gt; Business Areas &gt; Real Estate Development</li>
+      </ul>
+    </div>
+    <div class="wrapper">
+      <div class="real-estate">
+        <div class="left">
+          <h1><%= @real_estate_project.name %></h1>
+          <div class="preview"><%= image_tag @real_estate_project.preview_image %></div>
+          <div class="description"><%= raw @real_estate_project.description %></div>
+          <div class="clear"></div>
+          <div class="panaorama"><%= image_tag @real_estate_project.panaorama_image %></div>
+        </div>
+        <div class="right">
+          <%= link_to image_tag('ico_weibo.png') %>
+          <ul>
+            <li class="zh">把这个项目分享给朋友们！</li>
+            <li>Share this project to friends!</li>
+          </ul>
+          <p>Ditan "National Yufu" project is the crown Squibb Company and Beijing first agricultural cooperative development and construction group. Projects targeting high-end, low-carbon environmental protection office, high-end clubs and facilities for the elderly. Project is located in the central axis of the Forbidden City and the North East "peace in the district," the core area, adjacent to Ditan Park.</p>
+          <br />
+          <p>The total area of 49 mu, building area of more than 20,000 square meters of land, the development cycle of about two years. After completion of the project, will provide high-quality high-end enterprise office environment and business exchange platform, creating Dongcheng District, "Peace in the new business district landmark," create "Beijing's chief urban ecology Chinese business center."</p>
+        </div>
+        <%= javascript_tag do %>
+        if ($('div.real-estate div.left').height() < $('div.real-estate div.right').height()) {
+          $('div.real-estate div.left').css('height', $('div.real-estate div.right').height());
+        }
+        <% end %>
+        <div class="clear"></div>
+      </div>
+    </div>
+  </div>
+</div>

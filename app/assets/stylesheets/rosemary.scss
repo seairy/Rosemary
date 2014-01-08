@@ -279,6 +279,50 @@ body, div, span, p, li, a {
 				}
 			}
 		}
+		div.real-estate {
+			div.left {
+				float: left;
+				padding-right: 18px;
+				width: 686px;
+				border-right: 1px #9fa0a0 solid;
+				h1 {
+					margin-bottom: 12px;
+					font: 18px 'Microsoft Yahei';
+					color: #e60012;
+				}
+				div.preview {
+					float: left;
+					width: 221px;
+					img {
+						width: 221px;
+						height: 146px;
+					}
+				}
+				div.description {
+					float: right;
+					width: 445px;
+					height: 146px;
+				}
+				div.panaorama {
+					padding-top: 12px;
+				}
+			}
+			div.right {
+				float: right;
+				width: 230px;
+				ul {
+					padding: 18px 0;
+					margin-bottom: 12px;
+					border-bottom: 1px #9fa0a0 solid;
+					li {
+						line-height: 22px;
+						&.zh {
+							color: #e60012;
+						}
+					}
+				}
+			}
+		}
 		div.news-list {
 			div.header {
 				padding-left: 10px;
