@@ -17,7 +17,7 @@
             <% @real_estate_projects.each do |real_estate_project| %>
             <li>
               <h3><%= link_to real_estate_project.name, real_estate_project %></h3>
-              <%= link_to image_tag(real_estate_project.cover_image) %>
+              <%= link_to image_tag(real_estate_project.cover_image), real_estate_project %>
               <p><%= indent_tag real_estate_project.description.strip_tags.strip.truncate(66) %></p>
               <%= link_to 'more', real_estate_project, class: 'more' %>
             </li>

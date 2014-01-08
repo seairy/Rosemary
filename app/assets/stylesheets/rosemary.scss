@@ -453,6 +453,19 @@ body, div, span, p, li, a {
 		background: #e60012 url(/assets/footer_news_left.png) no-repeat;
 		color: #fff;
 		line-height: 40px;
+		ul {
+			float: right;
+			overflow: hidden;
+			width: 1020px;
+			height: 40px;
+			li {
+				line-height: 40px;
+				a {
+					color: #fff;
+					text-decoration: none;
+				}
+			}
+		}
 	}
 }
 
