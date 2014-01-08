@@ -3,7 +3,7 @@
     <span>创建新房地产项目</span>
   </div>
   <div class="chaos-panel-body no-padding">
-    <%= form_for [:admin, @real_estate_project], html: { class: 'chaos-form', multipart: true  } do |f| %>
+    <%= form_for [:admin, @real_estate_project], html: { class: 'chaos-form', multipart: true } do |f| %>
       <%= render "shared/admin/error_messages", target: @real_estate_project %>
       <div class="chaos-form-inline">
         <div class="chaos-form-row bordered">
