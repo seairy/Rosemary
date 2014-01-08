@@ -14,36 +14,14 @@
         <div class="item red">
           <h2>◆ 房地产开发 - Real Estate Development</h2>
           <ul>
+            <% @real_estate_projects.each do |real_estate_project| %>
             <li>
-              <h3><%= link_to '北京项目 - 地坛“国御府”项目' %></h3>
-              <%= link_to image_tag('business_red_01.png') %>
-              <p>地坛“国御府”项目是中冠宝公司与北京首农集团合作开发建设的。项目定位高端、低碳环保的办公、高端会所及养老设施。项目位于紫禁城...</p>
-              <%= link_to 'more', '#', class: 'more' %>
+              <h3><%= link_to real_estate_project.name, real_estate_project %></h3>
+              <%= link_to image_tag(real_estate_project.cover_image) %>
+              <p><%= indent_tag real_estate_project.description.strip_tags.strip.truncate(66) %></p>
+              <%= link_to 'more', real_estate_project, class: 'more' %>
             </li>
-            <li>
-              <div class="title">
-                <h3><%= link_to '成都项目 - 成都郫县花园镇别墅项目' %></h3>
-                <%= link_to image_tag('business_red_02.png') %>
-                <p>地坛“国御府”项目是中冠宝公司与北京首农集团合作开发建设的。项目定位高端、低碳环保的办公、高端会所及养老设施。项目位于紫禁城...</p>
-                <%= link_to 'more', '#', class: 'more' %>
-              </div>
-            </li>
-            <li>
-              <div class="title">
-                <h3><%= link_to '天津项目 - 天津“建邦•时代汇”项目' %></h3>
-                <%= link_to image_tag('business_red_03.png') %>
-                <p>地坛“国御府”项目是中冠宝公司与北京首农集团合作开发建设的。项目定位高端、低碳环保的办公、高端会所及养老设施。项目位于紫禁城...</p>
-                <%= link_to 'more', '#', class: 'more' %>
-              </div>
-            </li>
-            <li>
-              <div class="title">
-                <h3><%= link_to '江苏项目 - 江苏宜兴科创慧谷项目' %></h3>
-                <%= link_to image_tag('business_red_04.png') %>
-                <p>地坛“国御府”项目是中冠宝公司与北京首农集团合作开发建设的。项目定位高端、低碳环保的办公、高端会所及养老设施。项目位于紫禁城...</p>
-                <%= link_to 'more', '#', class: 'more' %>
-              </div>
-            </li>
+            <% end %>
           </ul>
           <div class="clear"></div>
         </div>
