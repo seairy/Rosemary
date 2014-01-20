@@ -213,8 +213,19 @@ body, div, span, p, li, a {
 								text-decoration: none;
 							}
 						}
-						img {
-							margin-bottom: 8px;
+						div.image {
+							position: relative;
+							div.cover {
+								position: absolute;
+								top: 0;
+								z-index: 9999;
+								width: 222px;
+								height: 162px;
+								background: url(/assets/business_cover.png) no-repeat right bottom;
+							}
+							img {
+								margin-bottom: 8px;
+							}
 						}
 						a.more {
 							float: right;
