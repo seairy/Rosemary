@@ -11,17 +11,17 @@
       <div id="header">
         <%= image_tag('ico_logo.png') unless current_page?(controller: 'home', action: 'index') %>
         <ul>
-          <li><%= link_to '首页', root_path %></li>
+          <li<%= current_tag :home %>><%= link_to '首页', root_path %></li>
           <li>\</li>
-          <li><%= link_to '公司简介', about_us_path %></li>
+          <li<%= current_tag :about_us %>><%= link_to '公司简介', about_us_path %></li>
           <li>\</li>
-          <li><%= link_to '业务领域', business_areas_path %></li>
+          <li<%= current_tag :business_areas %>><%= link_to '业务领域', business_areas_path %></li>
           <li>\</li>
-          <li><%= link_to '公司动态', articles_path %></li>
+          <li<%= current_tag :articles %>><%= link_to '公司动态', articles_path %></li>
           <li>\</li>
-          <li><%= link_to '人力资源', human_resources_path %></li>
+          <li<%= current_tag :human_resources %>><%= link_to '人力资源', human_resources_path %></li>
           <li>\</li>
-          <li><%= link_to '联系我们', contact_us_path %></li>
+          <li<%= current_tag :contact_us %>><%= link_to '联系我们', contact_us_path %></li>
         </ul>
         <div class="clear"></div>
       </div>

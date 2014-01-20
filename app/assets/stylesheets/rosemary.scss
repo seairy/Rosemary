@@ -25,6 +25,11 @@ body, div, span, p, li, a {
 			padding-right: 16px;
 			color: #fff;
 			line-height: 100px;
+			&.current {
+				a {
+					color: #e60012;
+				}
+			}
 			a {
 				font: 14px 'Microsoft Yahei';
 				color: #fff;
@@ -41,7 +46,8 @@ body, div, span, p, li, a {
 	margin: 0 auto;
 	width: 986px;
 	h1 {
-		font-size: 30px;
+		font: 32px Arial;
+		font-weight: bold;
 		color: #fff;
 		line-height: 60px;
 	}
@@ -119,6 +125,8 @@ body, div, span, p, li, a {
 		height: 85px;
 		ul {
 			li {
+				font-size: 14px;
+				font-weight: bold;
 				line-height: 30px;
 				&.zh {
 					color: #e60012;
