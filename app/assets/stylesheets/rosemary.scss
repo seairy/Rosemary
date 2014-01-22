@@ -153,8 +153,17 @@ body, div, span, p, li, a {
 		padding: 18px;
 		border: 1px #9fa0a0 solid;
 		h3 {
-			color: #e60012;
 			margin-bottom: 10px;
+			font-size: 14px;
+			font-weight: bold;
+			color: #e60012;
+			a {
+				margin-bottom: 10px;
+				font-size: 14px;
+				font-weight: bold;
+				color: #e60012;
+				text-decoration: none;
+			}
 		}
 		div.zgb4us {
 			float: right;
@@ -438,12 +447,17 @@ body, div, span, p, li, a {
 		}
 		div.contact-us {
 			div.header {
-				padding-left: 10px;
-				height: 230px;
-				background: #e60012 url(/assets/contact_header.png) no-repeat bottom;
-				line-height: 30px;
-				font-size: 14px;
-				color: #fff;
+				height: 229px;
+				background: #e60012;
+				span {
+					padding-left: 10px;
+					line-height: 30px;
+					font-size: 14px;
+					color: #fff;
+				}
+				img {
+					width: 948px;
+				}
 			}
 			div.left {
 				float: left;
