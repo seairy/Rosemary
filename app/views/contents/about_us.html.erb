@@ -5,8 +5,8 @@
   <div id="content">
     <div class="location">
       <ul>
-        <li class="zh">首页 &raquo; 公司简介</li>
-        <li class="en">Home &raquo; About Us</li>
+        <li class="zh"><%= link_to '首页', root_path %> &gt; 公司简介</li>
+        <li class="en"><%= link_to 'Home', root_path %> &gt; About Us</li>
       </ul>
     </div>
     <div class="wrapper">
@@ -22,8 +22,9 @@
           <br />
           <p>中冠宝将北京定位为发展重心，正筹备开发地坛“国御府”项目、来广营东路三期项目。同时，中冠宝也着眼于其他城市的房地产土地开发建设项目，直接投资开发江苏宜兴科创慧谷项目、成都郫县花园镇项目和天津华明镇项目等。</p>
           <ul>
-            <li>◆ 北京地坛“国御府”项目启动奠基仪式</li>
-            <li>◆ “建邦 • 时代汇”商业合作单位签约仪式  暨开盘典礼隆重举行</li>
+            <% @featured_articles.each do |article| %>
+            <li><%= link_to "◆ #{article.title}", article, target: '_blank' %></li>
+            <% end %>
           </ul>
         </div>
         <div class="right"></div>

@@ -48,10 +48,9 @@
         <div class="news">
           Latest News:
           <ul id="latest-news">
-            <li><%= link_to '北京地坛“国御府”项目启动奠基仪式' %></li>
-            <li><%= link_to '“建邦•时代汇”商业合作单位签约仪式  暨开盘典礼隆重举行' %></li>
-            <li><%= link_to '天津华明镇项目售楼中心开始动工' %></li>
-            <li><%= link_to '宜兴科创慧谷项目开工仪式' %></li>
+            <% @footer_articles.each do |article| %>
+            <li><%= link_to article.title, article, target: '_blank' %></li>
+            <% end %>
           </ul>
           <%= javascript_tag do %>
           $(function(){
