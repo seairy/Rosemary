@@ -1,5 +1,5 @@
 <div id="navi-wrapper">
-  <div id="navi"><h1>BUSINESS AREAS</h1></div>
+  <div id="navi"><h1>BUSINESS INTRODUCTION</h1></div>
 </div>
 <div id="content-wrapper">
   <div id="content">
@@ -18,10 +18,10 @@
             <li>
               <h3><%= link_to real_estate_project.name, real_estate_project %></h3>
               <div class="image">
-                <div class="cover"></div>
-                <%= link_to image_tag(real_estate_project.cover_image), real_estate_project %>
+                <%= link_to raw('<div class="cover"></div>'), real_estate_project %>
+                <%= link_to image_tag(real_estate_project.cover_image) %>
               </div>
-              <p><%= indent_tag real_estate_project.description.strip_tags.strip.truncate(66) %></p>
+              <p><%= link_to indent_tag(real_estate_project.description.strip_tags.strip.truncate(66)), real_estate_project %></p>
               <%= link_to 'more', real_estate_project, class: 'more' %>
             </li>
             <% end %>

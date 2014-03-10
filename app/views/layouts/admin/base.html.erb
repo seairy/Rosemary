@@ -114,6 +114,13 @@
 					 <%= link_to '控制面板', admin_dashboard_path %>
 					</li>
 					<li>
+						<a href="#">海报管理</a>
+						<ul>
+							<li><%= link_to '海报列表', admin_posters_path %></li>
+							<li><%= link_to '添加海报', new_admin_poster_path %></li>
+						</ul>
+					</li>
+					<li>
 						<a href="#">文章管理</a>
 						<ul>
 							<li><%= link_to '文章列表', admin_articles_path %></li>

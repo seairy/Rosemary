@@ -10,6 +10,7 @@ Rosemary::Application.routes.draw do
   namespace :admin do
     root :to => 'dashboard#index'
     get 'dashboard', to: 'dashboard#index', as: :dashboard
+    resources :posters
     resources :articles
     resources :attachments
     resources :real_estate_projects

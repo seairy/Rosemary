@@ -251,6 +251,11 @@ body, div, span, p, li, a {
 								margin-bottom: 8px;
 							}
 						}
+						p {
+							a {
+								text-decoration: none;
+							}
+						}
 						a.more {
 							float: right;
 							text-decoration: none;

@@ -8,10 +8,9 @@
       </div>
       <div id="banner-marquee" class="wrap">
         <ul>
-          <li><%= link_to image_tag('cover_banner_01.png') %></li>
-          <li><%= link_to image_tag('cover_banner_02.png') %></li>
-          <li><%= link_to image_tag('cover_banner_03.png') %></li>
-          <li><%= link_to image_tag('cover_banner_04.png') %></li>
+          <% @posters.each do |poster| %>
+          <li><%= link_to image_tag(poster.image.url) %></li>
+          <% end %>
         </ul>
       </div>
       <div class="next">
