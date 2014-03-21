@@ -9,7 +9,7 @@
       <div id="banner-marquee" class="wrap">
         <ul>
           <% @posters.each do |poster| %>
-          <li><%= link_to image_tag(poster.image.url) %></li>
+          <li><%= link_to image_tag(poster.image.url), poster.url %></li>
           <% end %>
         </ul>
       </div>
