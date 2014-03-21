@@ -6,7 +6,7 @@
     <div class="location">
       <ul>
         <li class="zh"><%= link_to '首页', root_path %> &gt; <%= link_to '业务领域', business_areas_path %> &gt; 房地产开发</li>
-        <li class="en"><%= link_to 'Home', root_path %> &gt; <%= link_to 'Business Areas', business_areas_path %> &gt; Real Estate Development</li>
+        <li class="en"><%= link_to 'Home', root_path %> &gt; <%= link_to 'Business Introduction', business_areas_path %> &gt; Real Estate Development</li>
       </ul>
     </div>
     <div class="wrapper">
@@ -24,9 +24,7 @@
             <li class="zh">把这个项目分享给朋友们！</li>
             <li>Share this project to friends!</li>
           </ul>
-          <p>Ditan "National Yufu" project is the crown Squibb Company and Beijing first agricultural cooperative development and construction group. Projects targeting high-end, low-carbon environmental protection office, high-end clubs and facilities for the elderly. Project is located in the central axis of the Forbidden City and the North East "peace in the district," the core area, adjacent to Ditan Park.</p>
-          <br />
-          <p>The total area of 49 mu, building area of more than 20,000 square meters of land, the development cycle of about two years. After completion of the project, will provide high-quality high-end enterprise office environment and business exchange platform, creating Dongcheng District, "Peace in the new business district landmark," create "Beijing's chief urban ecology Chinese business center."</p>
+          <%= @real_estate_project.en_description %>
         </div>
         <%= javascript_tag do %>
         if ($('div.real-estate div.left').height() < $('div.real-estate div.right').height()) {

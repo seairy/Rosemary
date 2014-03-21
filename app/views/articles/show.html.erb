@@ -6,7 +6,7 @@
     <div class="location">
       <ul>
         <li class="zh"><%= link_to '首页', root_path %> &gt; 公司动态</li>
-        <li class="en"><%= link_to 'Home', root_path %> &gt; News</li>
+        <li class="en"><%= link_to 'Home', root_path %> &gt; Company Update</li>
       </ul>
     </div>
     <div class="wrapper">
@@ -21,6 +21,7 @@
             <li class="zh">把这则新闻分享给朋友们！</li>
             <li>Share this news to friends!</li>
           </ul>
+          <%= @article.en_content %>
         </div>
         <%= javascript_tag do %>
         if ($('div.news-show div.left').height() < $('div.news-show div.right').height()) {
