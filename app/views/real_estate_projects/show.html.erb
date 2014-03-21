@@ -24,7 +24,7 @@
             <li class="zh">把这个项目分享给朋友们！</li>
             <li>Share this project to friends!</li>
           </ul>
-          <%= @real_estate_project.en_description %>
+          <%= raw @real_estate_project.en_description %>
         </div>
         <%= javascript_tag do %>
         if ($('div.real-estate div.left').height() < $('div.real-estate div.right').height()) {
