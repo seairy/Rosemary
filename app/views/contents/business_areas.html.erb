@@ -11,21 +11,41 @@
     </div>
     <div class="wrapper">
       <div class="business">
-        <div class="item red">
+        <div id="real" class="item red real-estate-marquee-wrap">
           <h2>◆ 房地产开发 - Real Estate Development</h2>
-          <ul>
-            <% @real_estate_projects.each do |real_estate_project| %>
-            <li>
-              <h3><%= link_to real_estate_project.name, real_estate_project %></h3>
-              <div class="image">
-                <%= link_to raw('<div class="cover"></div>'), real_estate_project %>
-                <%= link_to image_tag(real_estate_project.cover_image) %>
-              </div>
-              <p><%= link_to indent_tag(real_estate_project.description.strip_tags.strip.truncate(66)), real_estate_project %></p>
-              <%= link_to 'more', real_estate_project, class: 'more' %>
-            </li>
-            <% end %>
-          </ul>
+          <div class="prev">
+            <%= link_to image_tag('rs_arrow_left.png'), nil, id: 'real-estate-prev', class: 'control' %>
+          </div>
+          <div id="real-estate-marquee" class="wrap">
+            <ul>
+              <% @real_estate_projects.each do |real_estate_project| %>
+              <li>
+                <h3><%= link_to real_estate_project.name, real_estate_project %></h3>
+                <div class="image">
+                  <%= link_to raw('<div class="cover"></div>'), real_estate_project %>
+                  <%= link_to image_tag(real_estate_project.cover_image) %>
+                </div>
+                <p><%= link_to indent_tag(real_estate_project.description.strip_tags.strip.truncate(66)), real_estate_project %></p>
+                <%= link_to 'more', real_estate_project, class: 'more' %>
+              </li>
+              <% end %>
+            </ul>
+          </div>
+          <div class="next">
+            <%= link_to image_tag('rs_arrow_right.png'), nil, id: 'real-estate-next', class: 'control' %>
+          </div>
+          <%= javascript_tag do %>
+          $(function() {
+            $('#real-estate-marquee').marquee({
+              auto: false,
+              speed: 1000,
+              showNum: 4,
+              stepLen: 1,
+              prevElement: $('#real-estate-prev'),
+              nextElement: $('#real-estate-next')
+            });
+          })
+          <% end %>
           <div class="clear"></div>
         </div>
         <div class="item fi">
