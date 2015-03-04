@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class RealEstateProject < ActiveRecord::Base
   mount_uploader :cover_image, RealEstateProjectCoverImageUploader
   mount_uploader :preview_image, RealEstateProjectPreviewImageUploader

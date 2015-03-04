@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class Poster < ActiveRecord::Base
   mount_uploader :image, PosterUploader
   scope :available, where(available: true)

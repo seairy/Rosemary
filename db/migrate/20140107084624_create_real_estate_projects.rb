@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class CreateRealEstateProjects < ActiveRecord::Migration
   def change
     create_table :real_estate_projects do |t|
