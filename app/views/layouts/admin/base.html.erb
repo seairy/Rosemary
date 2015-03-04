@@ -18,78 +18,10 @@
 			</div>
 		</div>
 		<div id="chaos-user-tools" class="clearfix">
-			<div id="chaos-user-notif" class="chaos-dropdown-menu">
-				<a href="#" data-toggle="dropdown" class="chaos-dropdown-trigger"><i class="icon-exclamation-sign"></i></a>
-				<span class="chaos-dropdown-notif"><%#= @unread_notifications_count %>0</span>
-				<div class="chaos-dropdown-box">
-					<div class="chaos-dropdown-content">
-						<ul class="chaos-notifications">
-						  <%# @dropdown_notifications.each do |notification| %>
-							<!--li>
-								<a href="<%#= url_for [:admin, notification] %>">
-									<span class="message"><%#= notification.title %></span>
-									<span class="time"><%#= notification.created_at %></span>
-								</a>
-							</li-->
-							<%# end %>
-						<div class="chaos-dropdown-viewall">
-							<%#= link_to '查看所有通知', admin_notifications_path %>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div id="chaos-user-message" class="chaos-dropdown-menu">
-				<a href="#" data-toggle="dropdown" class="chaos-dropdown-trigger"><i class="icon-envelope"></i></a>
-				<span class="chaos-dropdown-notif">0</span>
-				<div class="chaos-dropdown-box">
-					<div class="chaos-dropdown-content">
-						<ul class="chaos-messages">
-							<!--li class="read">
-								<a href="#">
-									<span class="sender">John Doe</span>
-									<span class="message">Lorem ipsum dolor sit amet consectetur adipiscing elit, et al commore</span>
-									<span class="time">January 21, 2012</span>
-								</a>
-							</li>
-							<li class="read">
-								<a href="#">
-									<span class="sender">John Doe</span>
-									<span class="message">Lorem ipsum dolor sit amet</span>
-									<span class="time">January 21, 2012</span>
-								</a>
-							</li>
-							<li class="unread">
-								<a href="#">
-									<span class="sender">John Doe</span>
-									<span class="message">Lorem ipsum dolor sit amet</span>
-									<span class="time">January 21, 2012</span>
-								</a>
-							</li>
-							<li class="unread">
-								<a href="#">
-									<span class="sender">John Doe</span>
-									<span class="message">Lorem ipsum dolor sit amet</span>
-									<span class="time">January 21, 2012</span>
-								</a>
-							</li>
-							<li class="unread">
-								<a href="#">
-									<span class="sender">John Doe</span>
-									<span class="message">Lorem ipsum dolor sit amet</span>
-									<span class="time">January 21, 2012</span>
-								</a>
-							</li-->
-						</ul>
-						<div class="chaos-dropdown-viewall">
-							<a href="#">查看所有信息</a>
-						</div>
-					</div>
-				</div>
-			</div>
 			<div id="chaos-user-info" class="chaos-inset">
 				<div id="chaos-user-photo"><%= image_tag 'admin/chaos-default-portrait.png' %></div>
 				<div id="chaos-user-functions">
-					<div id="chaos-account">欢迎您，<%#= session[:administrator][:name]%></div>
+					<div id="chaos-account">欢迎您，<%= session[:administrator][:name]%></div>
 					<ul>
 						<li><%= link_to '我的账号', edit_admin_profile_path %></li>
 						<li><%= link_to '修改密码', edit_password_admin_profile_path %></li>
